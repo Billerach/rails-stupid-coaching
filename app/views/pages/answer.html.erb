@@ -1,5 +1,13 @@
+<p>
 <%=
   if params[:question] == "I am going to work"
-    return "<p>Great!</p>"
-  end
+    "Great!"
+  elsif params[:question] =~ /.+\?$/
+    "Silly question, get dressed and go to work!"
+  else
+    "I don't care, get dressed and go to work!"
+   end
 %>
+</p>
+<%= link_to "Ask a new question", "http://localhost:3000/ask"
+ %>
